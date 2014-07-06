@@ -163,7 +163,7 @@ class EloquaRestApiBehaviourTest extends DrupalWebTestCase {
     $this->drupalLogin($account);
 
     // Attempt to visit the configuration page.
-    $this->drupalGet('admin/config/system/eloqua-rest-api');
+    $this->drupalGet('admin/config/services/eloqua');
     $this->assertNoFieldByName('eloqua_rest_api_site_name', NULL, 'Did not find the configuration form.');
     $this->assertEqual($this->drupalGetHeader(':status'), 'HTTP/1.1 403 Forbidden', 'Proper permissions enforced.');
 
@@ -178,7 +178,7 @@ class EloquaRestApiBehaviourTest extends DrupalWebTestCase {
     $this->drupalLogin($account);
 
     // Attempt to visit the configuration page.
-    $this->drupalGet('admin/config/system/eloqua-rest-api');
+    $this->drupalGet('admin/config/services/eloqua');
     $this->assertFieldByName('eloqua_rest_api_site_name', NULL, 'Found the configuration form.');
   }
 
@@ -191,7 +191,7 @@ class EloquaRestApiBehaviourTest extends DrupalWebTestCase {
     $this->drupalLogin($account);
 
     // Attempt to fill out the config form with no values.
-    $this->drupalPost('admin/config/system/eloqua-rest-api', array(), 'Save configuration');
+    $this->drupalPost('admin/config/services/eloqua', array(), 'Save configuration');
 
     // Ensure all fields are required.
     $this->assertText('Site name field is required.', 'Site name field required');
@@ -199,7 +199,7 @@ class EloquaRestApiBehaviourTest extends DrupalWebTestCase {
     $this->assertText('Login password field is required.', 'Password field required.');
 
     // Fill out the form with valid values.
-    $this->drupalPost('admin/config/system/eloqua-rest-api', array(
+    $this->drupalPost('admin/config/services/eloqua', array(
       'eloqua_rest_api_site_name' => 'Example.Company',
       'eloqua_rest_api_login_name' => 'Foo',
       'eloqua_rest_api_login_password' => 'Bar123',

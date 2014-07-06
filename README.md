@@ -22,9 +22,9 @@ integrate Drupal and Eloqua.
 
 Configuration is simple!
 1. Ensure your user has the permission `administer eloqua rest api`.
-2. Navigate to `admin/config/system/eloqua-rest-api` to enter Eloqua
-   credentials. It's recommended that you use admin credentials to your Eloqua
-   Instance, otherwise your password may expire and break integrations.
+2. Navigate to `admin/config/services/eloqua` to enter Eloqua credentials. It's
+   recommended that you use admin credentials to your Eloqua Instance, otherwise
+   your password may expire and break integrations.
 
 More information on [installing and using Composer Manager]() is available on
 GitHub.
