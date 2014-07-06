@@ -24,7 +24,7 @@ function eloqua_rest_api_admin_settings($form_state) {
 
   $form['eloqua_rest_api_login_password'] = array(
     '#type' => 'textfield',
-    '#title' => t('Login Password'),
+    '#title' => t('Login password'),
     '#default_value' => variable_get('eloqua_rest_api_login_password', ''),
     '#description' => t('The password associated with the user above; used to verify access to the API.'),
     '#required' => TRUE,

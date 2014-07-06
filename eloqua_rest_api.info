@@ -4,3 +4,5 @@ package = Eloqua
 core = 7.x
 
 dependencies[] = composer_manager
+
+files[] = eloqua_rest_api.test

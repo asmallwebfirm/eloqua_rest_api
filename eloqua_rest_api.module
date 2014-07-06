@@ -13,7 +13,7 @@ use Eloqua\Client;
 function eloqua_rest_api_menu() {
   $items = array();
 
-  $items['admin/config/system/eloqua-rest-api/settings'] = array(
+  $items['admin/config/system/eloqua-rest-api'] = array(
     'title' => 'Eloqua REST API settings',
     'description' => 'Configure Account information for connecting to the Eloqua REST API.',
     'page callback' => 'drupal_get_form',
